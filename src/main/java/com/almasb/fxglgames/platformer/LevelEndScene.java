@@ -87,7 +87,7 @@ public class LevelEndScene extends SubScene {
                 if (!isAnimationDone.getValue())
                     return;
 
-                getSceneService().popSubScene();
+                getGameController().exit();
             }
         }, MouseButton.PRIMARY);
     }
@@ -99,7 +99,7 @@ public class LevelEndScene extends SubScene {
 
         LevelTimeData timeData = geto("levelTimeData");
 
-        textUserTime.setText(String.format("Your time: %.2f sec!", userTime.toSeconds()));
+        textUserTime.setText(String.format("Player1  Win!!", userTime.toSeconds()));
 
         gradeBox.getChildren().setAll(
                 new Grade(Duration.seconds(timeData.star1), userTime),
@@ -140,7 +140,7 @@ public class LevelEndScene extends SubScene {
 
             getChildren().add(userTime.lessThanOrEqualTo(gradeTime) ? STAR_FULL.copy() : STAR_EMPTY.copy());
 
-            getChildren().add(getUIFactoryService().newText(String.format("<%.2f", gradeTime.toSeconds()), Color.WHITE, 16.0));
+            getChildren().add(getUIFactoryService().newText(String.format("", gradeTime.toSeconds()), Color.WHITE, 16.0));
         }
     }
 
