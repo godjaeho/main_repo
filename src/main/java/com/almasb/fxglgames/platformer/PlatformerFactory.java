@@ -2,7 +2,6 @@ package com.almasb.fxglgames.platformer;
 
 import com.almasb.fxgl.dsl.components.LiftComponent;
 import com.almasb.fxgl.dsl.views.ScrollingBackgroundView;
-import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.Spawns;
@@ -34,10 +33,17 @@ import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+
+import com.almasb.fxglgames.platformer.PlatformerApp;
+
 /**
  * @author Almas Baimagambetov (almaslvl@gmail.com)
  */
 public class PlatformerFactory implements EntityFactory {
+   
+
+
+   
 
     @Spawns("background")
     public Entity newBackground(SpawnData data) {
@@ -164,13 +170,20 @@ public class PlatformerFactory implements EntityFactory {
         PhysicsComponent physics = new PhysicsComponent();
         physics.setFixtureDef(new FixtureDef().density(0.05f));
         physics.setBodyType(BodyType.DYNAMIC);
+        
+
 
         physics.setOnPhysicsInitialized(() -> {
             Point2D mousePosition = FXGL.getInput().getMousePositionWorld();
+            System.out.println("내가쏜거");
+            System.out.println(mousePosition);
 
             physics.setLinearVelocity(mousePosition.subtract(data.getX(), data.getY()).normalize().multiply(3000));
+       
+            
         });
-
+    
+    
         return entityBuilder(data)
                 .type(BULLET)
                 .viewWithBBox(new Rectangle(10, 10, Color.BLUE))
@@ -179,6 +192,40 @@ public class PlatformerFactory implements EntityFactory {
                 .with(new ExpireCleanComponent(Duration.seconds(3)))
                 .build();
     }
+
+
+    @Spawns("bullet2")
+    public Entity newBullet2(SpawnData data) {
+        PhysicsComponent physics = new PhysicsComponent();
+        physics.setFixtureDef(new FixtureDef().density(0.05f));
+        physics.setBodyType(BodyType.DYNAMIC);
+        double x = data.getX()/100000;
+            double y = data.getY()/100000;
+
+            double shotx = data.getX()%1000.0;
+            double shoty = data.getY()%1000.0;
+        
+        
+        SpawnData newdata = new SpawnData(x,y);  
+        physics.setOnPhysicsInitialized(() -> {
+            
+            System.out.println(shotx);
+            Point2D mousePosition = new Point2D(shotx, shoty);
+            // Point2D mousePosition = FXGL.getInput().getMousePositionWorld();
+            //new Point2D(x, y)
+                      
+            physics.setLinearVelocity(mousePosition.subtract(x, y).normalize().multiply(3000));
+        });
+
+        return entityBuilder(newdata)
+                .type(BULLET)
+                .viewWithBBox(new Rectangle(10, 10, Color.BLUE))
+                .collidable()
+                .with(physics)
+                .with(new ExpireCleanComponent(Duration.seconds(3)))
+                .build();
+    }
+
 
 
 //    @Spawns("messagePrompt")

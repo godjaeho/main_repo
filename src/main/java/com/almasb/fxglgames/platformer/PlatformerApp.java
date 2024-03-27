@@ -29,6 +29,8 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import java.util.concurrent.TimeUnit;
 import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+
 
 //인태님 임포트
 
@@ -57,6 +59,16 @@ import static com.almasb.fxglgames.platformer.EntityType.*;
 import static com.almasb.fxglgames.platformer.Config.*;
 import com.almasb.fxgl.net.Client;
 
+////// 소켓
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.concurrent.Executors;
+import org.json.JSONObject;
+////
+import java.util.ArrayList;
 
 
 /**
@@ -67,14 +79,14 @@ public class PlatformerApp extends GameApplication {
     private Bundle playerPositionBundle = new Bundle("PlayerPosition");
     private Bundle playerPositionBundle2 = new Bundle("Player2Position");
 
-
+    ArrayList<Entity> bulletData = new ArrayList<Entity>();
     private static final int MAX_LEVEL = 5;
     private static final int STARTING_LEVEL = 0;
 
     @Override
     protected void initSettings(GameSettings settings) {
-        settings.setWidth(1280);
-        settings.setHeight(720);
+        settings.setWidth(800);
+        settings.setHeight(600);
         settings.setSceneFactory(new SceneFactory() {
             @Override
             public LoadingScene newLoadingScene() {
@@ -92,10 +104,17 @@ public class PlatformerApp extends GameApplication {
     private Entity player5;
     private Entity player6;
     // private Client client;
-
+    private PrintWriter out;
+    private BufferedReader in;
+    private Socket socket;
 
     private static int playerID;
     private static Client<Bundle> client;
+    
+
+
+
+
     
     
     @Override
@@ -103,6 +122,20 @@ public class PlatformerApp extends GameApplication {
 
 
         onBtnDown(MouseButton.PRIMARY, () -> shoot());
+
+
+        getInput().addEventHandler(MouseEvent.MOUSE_PRESSED, event -> {
+            if (event.getButton() == MouseButton.PRIMARY) {
+                double mouseX = event.getSceneX();
+                double mouseY = event.getSceneY();
+                // 마우스 클릭 위치와 함께 sendPlayerPosition 호출
+                sendPlayerPosition(true, mouseX, mouseY);
+            }
+        });
+
+
+
+
         getInput().addAction(new UserAction("Left") {
             @Override
             protected void onAction() {
@@ -120,9 +153,7 @@ public class PlatformerApp extends GameApplication {
             @Override
             protected void onAction() {
                 player.getComponent(PlayerComponent.class).right();
-                // if (connection != null) {
-                //     connection.send("Right"); // Connection 객체를 통해 메시지 전송
-                // }
+                
             }
 
             @Override
@@ -135,9 +166,7 @@ public class PlatformerApp extends GameApplication {
             @Override
             protected void onActionBegin() {
                 player.getComponent(PlayerComponent.class).jump();
-                // if (connection != null) {
-                //     connection.send("Jump"); // Connection 객체를 통해 메시지 전송
-                // }
+               
             }
         }, KeyCode.W, VirtualButton.A);
 
@@ -163,13 +192,33 @@ public class PlatformerApp extends GameApplication {
     }
 
     private void shoot() {
-        spawn("bullet", player.getPosition().add(30, -5));
-     //   Entity bulletEntity = spawn("bullet", player.getPosition().add(30, -5));
-    //    Point2D bulletPosition = bulletEntity.getPosition();
-               
+        Entity bulletEntity = spawn("bullet", player.getPosition().add(0, -20));
+        Point2D bulletPosition = bulletEntity.getPosition();
+        bulletData.add(bulletEntity);
     
         }
 
+
+        //플레이어 2의 슛함수
+        private void shoot2(double x, double y) {
+
+            double xx = (player2.getPosition().getX()) *100000;
+            double yy = (player2.getPosition().getY()-20) *100000;
+            
+            System.out.println(player2.getPosition().getX());
+            System.out.println(player2.getPosition().getX()+30);
+
+
+            Point2D newww = new Point2D(xx+x , yy+y);
+            
+
+            Entity bulletEntity =  spawn("bullet2", newww);
+            
+//newBullet2(newww);
+            // Entity bulletEntity = spawn("bullet", player2.getPosition().add(30, -5));
+            
+        
+            }
 
 
     @Override
@@ -190,9 +239,26 @@ public class PlatformerApp extends GameApplication {
         loopBGM("BGM_dash_runner.wav");
     }
 
+
+
+    private void connectToServer() {
+        try {
+            socket = new Socket("34.47.82.108", 55555);  // 서버 IP와 포트 번호 지정
+            out = new PrintWriter(socket.getOutputStream(), true);
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
     @Override
     protected void initGame() {
         getGameWorld().addEntityFactory(new PlatformerFactory());
+
+        
+
 
         player = null;
         player2 = null;
@@ -201,9 +267,16 @@ public class PlatformerApp extends GameApplication {
         player5 = null;
         player6 = null;
 
-        playerID = 2;
+        playerID = 1;
 
         nextLevel();
+
+
+
+
+        connectToServer();
+
+
 
         // player must be spawned after call to nextLevel, otherwise player gets removed
         // before the update tick _actually_ adds the player to game world
@@ -258,48 +331,56 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
         viewport.bindToEntity(player, getAppWidth() / 2, getAppHeight() / 2);
         viewport.setLazy(true);
 
-
-        client = FXGL.getNetService().newTCPClient("192.168.0.40", 55555);
+/*
+        // client = FXGL.getNetService().newTCPClient("localhost", 55555);
+        // client = FXGL.getNetService().newTCPClient("192.168.0.40", 55555);
         
-        client.setOnConnected(connection -> {
+
+        // client.setOnConnected(connection -> {
             
-            var pos = player.getPosition();
-                var bundle = new Bundle("PlayerPosition");
-                bundle.put("PI", playerID);
-                bundle.put("x", pos.getX());
-                bundle.put("y", pos.getY());
+        //     var pos = player.getPosition();
+        //         var bundle = new Bundle("PlayerPosition");
+        //         bundle.put("PI", playerID);
+        //         bundle.put("x", pos.getX());
+        //         bundle.put("y", pos.getY());
 
-                // bundle.put("x", 100);
-                // bundle.put("y", 50);
+        //         // bundle.put("x", 100);
+        //         // bundle.put("y", 50);
             
-            connection.send(bundle);
+        //     connection.send(bundle);
 
 
-            connection.addMessageHandlerFX((conn, message) -> {
-                // 서버로부터 메시지를 받았을 때 처리할 로직
-                try {
-                    Bundle bdd = (Bundle) message;
+        //     connection.addMessageHandlerFX((conn, message) -> {
+        //         // 서버로부터 메시지를 받았을 때 처리할 로직
+        //         try {
+        //             Bundle bdd = (Bundle) message;
             
-                    int enemyID = bdd.get("PI");
-                    if (enemyID == 2) {
-                        double receivedx = bdd.get("x");
-                        double receivedy = bdd.get("y");
-                        System.out.println("이닛게임 들어와");
-                        System.out.print(receivedx);
-                        System.out.print(receivedy);
+        //             int enemyID = bdd.get("PI");
+        //             if (enemyID != playerID) {
+        //                 double receivedx = bdd.get("x");
+        //                 double receivedy = bdd.get("y");
+        //                 System.out.println("이닛게임 들어와");
+        //                 System.out.print(receivedx);
+        //                 System.out.print(receivedy);
 
-                        player2.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(receivedx-20, receivedy-20));
-                    }
-                } catch (Exception e) {
-                    // 예외 발생 시 처리할 로직
-                    e.printStackTrace(); // 또는 다른 처리를 수행할 수 있습니다.
-                }
+        //                 player2.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(receivedx, receivedy));
+        //             }
+        //         } catch (Exception e) {
+        //             // 예외 발생 시 처리할 로직
+        //             e.printStackTrace(); // 또는 다른 처리를 수행할 수 있습니다.
+        //         }
 
-            });
-        });
-        client.connectAsync();
+        //     });
+        // });
+        // client.connectAsync();
 
-        // //매 프레임마다 플레이어의 위치를 서버로 전송
+
+
+         */
+
+
+
+         // //매 프레임마다 플레이어의 위치를 서버로 전송
         // runOnce(() -> {
         //     if (player != null) {
         //         var pos = player.getPosition();
@@ -316,8 +397,93 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
         //         client.send(bundle);
         //     }
         // }, Duration.seconds(0.1));  // 0.1초마다 플레이어의 위치를 전송
+
+        Executors.newSingleThreadExecutor().submit(() -> {
+            try {
+                String message;
+                while ((message = in.readLine()) != null) {
+                      processMessage(message);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+
+
+
     }
     
+
+    public void sendPlayerPosition(boolean isShot) {
+        sendPlayerPosition(isShot, 0.0, 0.0);
+    }
+
+
+    public void sendPlayerPosition(boolean isShot, double x, double y) {
+        JSONObject jsonObj = new JSONObject();
+        Point2D pos = player.getPosition();
+    
+        jsonObj.put("PI", playerID);
+        jsonObj.put("x", pos.getX());
+        jsonObj.put("y", pos.getY());
+
+        jsonObj.put("isShot", isShot);
+        jsonObj.put("shotx", x);
+        jsonObj.put("shoty", y);
+
+
+        sendMessage(jsonObj.toString());
+    }
+
+
+    private void sendMessage(String message) {
+        if (out != null) {
+            out.println(message);
+        }
+    }
+
+
+    private void processMessage(String message) {
+        JSONObject jsonObj = new JSONObject(message);
+
+    // JSONObject에서 필요한 값 추출
+    int receivedPlayerID = jsonObj.getInt("PI");
+    double x = jsonObj.getDouble("x");
+    double y = jsonObj.getDouble("y");
+        boolean isShot = jsonObj.getBoolean("isShot");
+double shotx = jsonObj.getDouble("shotx");
+double shoty = jsonObj.getDouble("shoty");
+
+
+
+
+    // 현재 클라이언트의 플레이어와 ID가 다를 경우에만 위치 업데이트
+    if (receivedPlayerID != playerID) {
+        // FXGL 엔진의 메인 스레드에서 UI 업데이트 실행
+        Platform.runLater(() -> {
+        
+        if (isShot==true)
+        {
+            shoot2(shotx, shoty  );
+
+
+        }
+
+        
+            // player2가 다른 플레이어를 대표한다고 가정
+            if (player2 != null) {
+                player2.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(x, y));
+            }
+        });
+    }
+
+
+
+
+    }
+
+
 
     @Override
     protected void initPhysics() {
@@ -420,73 +586,12 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
     protected void onUpdate(double tpf) {
         inc("levelTime", tpf);
 
-        
-
-            // player2.setPosition(50.0, player.getPosition().getY()- 15.0);
-          
-            //player2.setPosition((double)100.0, (double)50.0);
-
-        client.setOnConnected(connection -> {
-            
-            var pos = player.getPosition();
-                
-            playerPositionBundle.put("PI", playerID);
-            playerPositionBundle.put("x", pos.getX());
-            playerPositionBundle.put("y", pos.getY());
-
-                // bundle.put("x", 100);
-                // bundle.put("y", 50);
-                // 클라이언트에 번들 잘 찍히는지. 
-            // System.out.println(playerPositionBundle);
-            connection.send(playerPositionBundle);
+        if (player != null) {
+            sendPlayerPosition(false);
 
 
-            connection.addMessageHandlerFX((conn, message) -> {
-                // 서버로부터 메시지를 받았을 때 처리할 로직
-                System.out.println(message);
-             
 
-                // System.out.println("메세지임");
-                try{
-                Bundle playerPositionBundle = (Bundle) message;
-            
-                
-                
-                if ((int)playerPositionBundle.get("PI") == 2) {
-                    double  receivedx = (double)playerPositionBundle.get("x");
-                    double  receivedy = (double)playerPositionBundle.get("y");
-        
-                    // player2 엔티티의 위치를 업데이트
-                    // System.out.print("플레이어2 조정하는중");
-                    // System.out.print("x" + receivedx);
-                    // System.out.print(" y  "+ receivedy);
-                    // System.out.println(" ");
-                    
-                    
-                    // Platform.runLater(() -> {
-                    //     player2.setPosition((double)receivedx, (double)receivedy);
-                    //     //System.out.println(player2.getPosition().getX());
-                    // });
-
-                    Platform.runLater(() -> {
-                        player2.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(receivedx-20, receivedy-20));
-                    });
-                    
-        
-                }
-                // player2.setPosition(100, 50);
-            }catch (Exception e) {
-                // 예외 발생 시 처리할 로직
-                e.printStackTrace(); // 또는 다른 처리를 수행할 수 있습니다.
-            }
-
-            });
-
-
-        });
-        client.connectAsync();
-        // player2.setPosition((double)receivedx, (double)receivedy);
-
+        }
 
 
 
