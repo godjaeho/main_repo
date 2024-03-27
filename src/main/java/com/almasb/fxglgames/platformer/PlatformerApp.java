@@ -26,6 +26,7 @@ import com.almasb.fxglgames.platformer.PlayerButtonHandler;
 import javafx.geometry.Point2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 import java.util.concurrent.TimeUnit;
 import javafx.scene.input.MouseButton;
@@ -93,6 +94,9 @@ public class PlatformerApp extends GameApplication {
     private Entity player6;
     // private Client client;
 
+    /**********************전광판에 띄울 추가 코드******************/
+    private Text text1;
+    private Text text2;
 
     private static int playerID;
     private static Client<Bundle> client;
@@ -179,9 +183,8 @@ public class PlatformerApp extends GameApplication {
         vars.put("score", 0);
         vars.put("hp", PLAYER_HP); // hp 부여
         vars.put("secondaryCharge", 0); // hp UI(초록색 원)
-        vars.put("lives", 3); // 플레이어 목숨 부여
+        vars.put("lives", 1); // 플레이어 목숨 부여
         vars.put("kills", 0);
-
 
     }
 
@@ -260,9 +263,9 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
 
 
 /**********************스코어 표시************************************/
-        var text1 = getUIFactoryService().newText("p1 LIFE: "+"life1" //score로직 추가 필요
+        text1 = getUIFactoryService().newText("PLAYER 1 남은 목숨: " + geti("lives") //score로직 추가 필요
                 , Color.RED, 30.0);
-        var text2 = getUIFactoryService().newText("p2 LIFE: "+"life2" //score로직 추가 필요
+        text2 = getUIFactoryService().newText("PLAYER 2 남은 목숨: " + geti("lives") //score로직 추가 필요
                 , Color.BLUE, 30.0);
         text1.setTranslateX(100);
         text1.setTranslateY(100);
@@ -442,7 +445,7 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
 
         run(() -> {
             Duration userTime = Duration.seconds(getd("levelTime"));
-            textUserTime.setText(String.format("TIME: %.0f sec", 120 - userTime.toSeconds()));
+            textUserTime.setText(String.format("TIME: %.0f sec", PLAY_TIME - userTime.toSeconds()));
         }, Duration.seconds(0.1)); // 0.1초마다 업데이트
     }
 /********************************* 게임 시간 보여주는 기능 추가 ****************************/
@@ -519,17 +522,14 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
         client.connectAsync();
         // player2.setPosition((double)receivedx, (double)receivedy);
 
-
-
-
-
         if (player.getY() > getAppHeight()) {
             onPlayerDied();
         }
 
         /**********************게임시간 종료 로직 **********************************************/
         Duration elapsedTime = Duration.seconds(getd("levelTime"));
-        if (elapsedTime.greaterThanOrEqualTo(Duration.seconds(120))) {
+
+        if (elapsedTime.greaterThanOrEqualTo(Duration.seconds(PLAY_TIME))) {
             //showMessage("Player?" +"  Win!");
             levelEndScene.get().onLevelFinish();
 
@@ -553,10 +553,15 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
 
             //남은 목숨이 1인 경우 => 더이상 리스폰하지 않음
             if (curUserLife <= 1) {
+                text1.setText("PLAYER 1 남은 목숨: " + 0);
                 System.out.println("남은 목숨 개수 0");
+                levelEndScene.get().onLevelFinish();
             }
             //남은 목숨이 2이상인 경우 => 위치 재조정, hp초기화, 목숨 감소
             else {
+                // 전광판 남은 목숨 변경
+                text1.setText("PLAYER 1 남은 목숨: " + (curUserLife - 1));
+
                 // 위치 재조정
                 player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(50, 50));
                 player.setZIndex(Integer.MAX_VALUE);
