@@ -177,8 +177,9 @@ public class PlatformerApp extends GameApplication {
         vars.put("level", STARTING_LEVEL);
         vars.put("levelTime", 0.0);
         vars.put("score", 0);
-        vars.put("hp", PLAYER_HP);
-        vars.put("secondaryCharge", 0); // 추가된 코드
+        vars.put("hp", PLAYER_HP); // hp 부여
+        vars.put("secondaryCharge", 0); // hp UI(초록색 원)
+        vars.put("lives", 3); // 플레이어 목숨 부여
         vars.put("kills", 0);
 
 
@@ -227,10 +228,11 @@ public class PlatformerApp extends GameApplication {
         spawn("background");
 
 
-/***************************hp 추가 코드 *************************************/
+/***************************hp 코드 *************************************/
 getWorldProperties().<Integer>addListener("hp", (prev, now) -> {
     if (now > PLAYER_HP){
         set("hp", PLAYER_HP);
+
     }
 
     if (now <= 0) {
@@ -249,7 +251,12 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
         set("secondaryCharge", MAX_CHARGES_SECONDARY);
 });
 /******************************************************************************/
-
+/***************************목숨 코드 *************************************/
+getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
+    if (now == 0)
+        System.out.println("남은 목숨이 없습니다!!");
+});
+/******************************************************************************/
 
 
 
@@ -497,16 +504,26 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
     }
 
     public void onPlayerDied() {
-//        setLevel(geti("level")); // 레벨 세팅 안하고, 플레이어 위치만 재조정함.
-
+//        setLevel(geti("level"));
         if (player != null) {
-            // 위치 재조정
-            player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(50, 50));
-            player.setZIndex(Integer.MAX_VALUE);
-            
-            //hp 초기화
-            set("hp", PLAYER_HP);
+            int curUserLife = geti("lives"); // 죽기 직전 남은 목숨 개수
 
+            //남은 목숨이 1인 경우 => 더이상 리스폰하지 않음
+            if (curUserLife <= 1) {
+                System.out.println("남은 목숨 개수 0");
+            }
+            //남은 목숨이 2이상인 경우 => 위치 재조정, hp초기화, 목숨 감소
+            else {
+                // 위치 재조정
+                player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(50, 50));
+                player.setZIndex(Integer.MAX_VALUE);
+
+                //hp 초기화
+                set("hp", PLAYER_HP);
+
+                //목숨 감소
+                inc("lives", -1);
+            }
         }
     }
 
