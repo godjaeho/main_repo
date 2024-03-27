@@ -111,10 +111,11 @@ public class PlatformerApp extends GameApplication {
         }, KeyCode.E, VirtualButton.B);
     }
 private void shoot() {
-    Entity bulletEntity = spawn("bullet", player.getPosition().add(30, -5));
+    spawn("bullet", player.getPosition().add(30, -5));
+ //   Entity bulletEntity = spawn("bullet", player.getPosition().add(30, -5));
 //    Point2D bulletPosition = bulletEntity.getPosition();
     
- //       spawn("bullet", player.getPosition().add(30, -5));
+    
 
     }
     
