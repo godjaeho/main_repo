@@ -31,7 +31,7 @@ public class LevelEndScene extends SubScene {
     private static final int WIDTH = 400;
     private static final int HEIGHT = 250;
 
-    private Text textUserTime = getUIFactoryService().newText("", Color.WHITE, 24.0);
+    private Text textUserTime = getUIFactoryService().newText("", Color.WHITE, 30.0);
     private HBox gradeBox = new HBox();
 
     private FontFactory levelFont = getAssetLoader().loadFont(getSettings().getFontMono());
@@ -45,18 +45,18 @@ public class LevelEndScene extends SubScene {
 
         VBox.setVgrow(gradeBox, Priority.ALWAYS);
 
-        var textContinue = getUIFactoryService().newText("Tap to continue", Color.WHITE, 11.0);
-        textContinue.visibleProperty().bind(isAnimationDone);
+//        var textContinue = getUIFactoryService().newText("Tap to continue", Color.WHITE, 11.0);
+//        textContinue.visibleProperty().bind(isAnimationDone);
+//
+//        animationBuilder(this)
+//                .repeatInfinitely()
+//                .autoReverse(true)
+//                .scale(textContinue)
+//                .from(new Point2D(1, 1))
+//                .to(new Point2D(1.25, 1.25))
+//                .buildAndPlay();
 
-        animationBuilder(this)
-                .repeatInfinitely()
-                .autoReverse(true)
-                .scale(textContinue)
-                .from(new Point2D(1, 1))
-                .to(new Point2D(1.25, 1.25))
-                .buildAndPlay();
-
-        var vbox = new VBox(15, textUserTime, gradeBox, textContinue);
+        var vbox = new VBox(15, textUserTime);
         vbox.setAlignment(Pos.CENTER);
         vbox.setPadding(new Insets(25));
 
@@ -68,17 +68,17 @@ public class LevelEndScene extends SubScene {
         root.setTranslateY(720 / 2 - HEIGHT / 2);
 
         var textLevel = new Text();
-        textLevel.textProperty().bind(getip("level").asString("Level %d"));
-        textLevel.setFont(levelFont.newFont(72));
-        textLevel.setRotate(-20);
-
-        textLevel.setFill(Color.ORANGE);
-        textLevel.setStroke(Color.BLACK);
-        textLevel.setStrokeWidth(1);
-
-        textLevel.setTranslateX(root.getTranslateX() - textLevel.getLayoutBounds().getWidth() / 3);
-        textLevel.setTranslateY(root.getTranslateY() + 25);
-
+//        textLevel.textProperty().bind(getip("level").asString("Level %d")); //level 뷰 제거해도 됨
+//        textLevel.setFont(levelFont.newFont(72));
+//        textLevel.setRotate(-20);
+//
+//        textLevel.setFill(Color.ORANGE);
+//        textLevel.setStroke(Color.BLACK);
+//        textLevel.setStrokeWidth(1);
+//
+//        textLevel.setTranslateX(root.getTranslateX() - textLevel.getLayoutBounds().getWidth() / 3);
+//        textLevel.setTranslateY(root.getTranslateY() + 25);
+//
         getContentRoot().getChildren().addAll(root, textLevel);
 
         getInput().addAction(new UserAction("Close Level End Screen") {
@@ -87,7 +87,7 @@ public class LevelEndScene extends SubScene {
                 if (!isAnimationDone.getValue())
                     return;
 
-                getSceneService().popSubScene();
+                getGameController().exit();
             }
         }, MouseButton.PRIMARY);
     }
@@ -99,7 +99,7 @@ public class LevelEndScene extends SubScene {
 
         LevelTimeData timeData = geto("levelTimeData");
 
-        textUserTime.setText(String.format("Your time: %.2f sec!", userTime.toSeconds()));
+        textUserTime.setText(String.format("PLAYER 1   승!!", userTime.toSeconds()));
 
         gradeBox.getChildren().setAll(
                 new Grade(Duration.seconds(timeData.star1), userTime),
@@ -140,7 +140,7 @@ public class LevelEndScene extends SubScene {
 
             getChildren().add(userTime.lessThanOrEqualTo(gradeTime) ? STAR_FULL.copy() : STAR_EMPTY.copy());
 
-            getChildren().add(getUIFactoryService().newText(String.format("<%.2f", gradeTime.toSeconds()), Color.WHITE, 16.0));
+            getChildren().add(getUIFactoryService().newText(String.format("", gradeTime.toSeconds()), Color.WHITE, 16.0));
         }
     }
 
