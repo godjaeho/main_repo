@@ -1,0 +1,764 @@
+14:18:34.889 [main                     ] DEBUG Logger               - Configured Logger
+14:18:34.922 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Untitled
+Version: 0.0
+Width: 1280
+Height: 720
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxglgames.platformer.PlatformerApp$1
+
+14:18:35.241 [JavaFX Application Thread] DEBUG FXGLApplication      - Initializing FXGL
+14:18:35.247 [JavaFX Application Thread] INFO  Engine               - FXGL-21 (28.12.2023 13.35) on WINDOWS (J:21.0.2 FX:21.0.1)
+14:18:35.248 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+14:18:35.248 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Windows 11 version 10.0
+14:18:35.248 [JavaFX Application Thread] DEBUG Engine               - Architecture: amd64
+14:18:35.248 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+14:18:35.249 [JavaFX Application Thread] INFO  Engine               -       Ask questions and discuss at: https://github.com/AlmasB/FXGL/discussions
+14:18:35.249 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+14:18:35.318 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Creating a JavaFX scene
+14:18:35.359 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Target settings size: 1280.0 x 720.0
+14:18:35.360 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled scene size:    1280.0 x 720.0
+14:18:35.360 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+14:18:35.361 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Set initial scene to FXGLStartupScene
+14:18:35.364 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Opening main window
+14:18:35.420 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Window border size: (12.800048828125, 35.20001220703125)
+14:18:35.421 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled size: 1280.0 x 720.0
+14:18:35.421 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scaled ratio: (1.0, 1.0)
+14:18:35.421 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Scene size: 1280.0 x 720.0
+14:18:35.422 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Stage size: 1292.800048828125 x 755.2000122070312
+14:18:35.429 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+14:18:35.501 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - User app class for loading assets: class com.almasb.fxglgames.platformer.PlatformerApp
+14:18:35.501 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Applying CSS: fxgl_dark.css
+14:18:35.502 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/ui/css/fxgl_dark.css
+14:18:35.559 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Initializing application scenes
+14:18:35.622 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/khpark/Downloads/main_repo-yw_develop/main_repo-yw_develop/target/classes/assets/textures/player.png
+14:18:35.640 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+14:18:35.679 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=720, physics.ppm=50.0
+14:18:35.680 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Using strategy: BRUTE_FORCE
+14:18:35.684 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 1280x720
+14:18:35.692 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyGameMenu()
+14:18:35.706 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+14:18:35.732 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/textures/particles/smoke.png
+14:18:35.812 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/textures/particles/trace_horizontal.png
+14:18:35.834 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Application scenes initialized
+14:18:35.848 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+14:18:35.855 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: C:\Users\khpark\Downloads\main_repo-yw_develop\main_repo-yw_develop\system\fxgl.bundle
+14:18:35.864 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+14:18:35.864 [FXGL Background Thread 1 ] DEBUG UpdaterService       - Checking for updates
+14:18:35.868 [FXGL Background Thread 1 ] DEBUG FXGLApplication      - Loading default localization
+14:18:35.868 [FXGL Background Thread 4 ] DEBUG FXGLApplication      - Loading fonts
+14:18:35.869 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/languages/english.lang
+14:18:35.868 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/ui/fonts/VarelaRound-Regular.ttf
+14:18:35.919 [FXGL Background Thread 1 ] INFO  FXGLApplication      - FXGL initialization took: 0.489 sec
+14:18:35.921 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/ui/fonts/Abel-Regular.ttf
+14:18:35.925 [JavaFX Application Thread] DEBUG Input                - Registered new binding: action0 - LMB
+14:18:35.929 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/ui/fonts/TerminalLandMono-Regular.otf
+14:18:35.932 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Left - A
+14:18:35.932 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Right - D
+14:18:35.933 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Jump - W
+14:18:35.934 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Use - E
+14:18:35.934 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/khpark/Downloads/main_repo-yw_develop/main_repo-yw_develop/target/classes/assets/music/BGM_dash_runner.wav
+14:18:35.940 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/ui/fonts/Courier-Prime.ttf
+14:18:36.052 [JavaFX Application Thread] DEBUG AudioPlayer          - Playing music com.almasb.fxgl.audio.Music@3bba97b9
+14:18:36.053 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/textures/fxgl_icon.png
+14:18:36.068 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: jar:file:///C:/Users/khpark/.m2/repository/com/github/almasb/fxgl/21/fxgl-21.jar!/fxglassets/textures/fxgl_default_cursor.png
+14:18:36.070 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - CTRL+8
+14:18:36.070 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+14:18:36.071 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+14:18:36.072 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Toggle Debug Camera - CTRL+7
+14:18:36.073 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+14:18:36.073 [JavaFX Application Thread] DEBUG LoopRunner           - Initializing JavaFX AnimationTimerLoop
+14:18:36.075 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+14:18:36.075 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:18:36.093 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLStartupScene and adding to MainLoadingScene
+14:18:36.093 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - FXGLStartupScene -> MainLoadingScene
+14:18:36.093 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+14:18:36.093 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+14:18:36.093 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+14:18:36.094 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+14:18:36.095 [FXGL Background Thread 4 ] DEBUG FXGLApplication      - Initializing game
+14:18:36.095 [JavaFX Application Thread] DEBUG FXGLApplication      - Registering font factories with UI factory
+14:18:36.150 [FXGL Background Thread 4 ] WARN  TMXLevelLoader       - TiledMap generated from 1.2.3. Supported version: 1.9.0. Some features may not be parsed fully.
+14:18:36.161 [FXGL Background Thread 4 ] DEBUG TMXLevelLoader       - Parsed TiledMap: file:/C:/Users/khpark/Downloads/main_repo-yw_develop/main_repo-yw_develop/target/classes/assets/levels/tmx/level1.tmx
+14:18:36.164 [FXGL Background Thread 4 ] DEBUG TMXLevelLoader       - Creating tile layer entities
+14:18:36.167 [FXGL Background Thread 4 ] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+14:18:36.169 [FXGL Background Thread 4 ] DEBUG TilesetLoader        - Created buffer with size 1050.0x700.0
+14:18:36.196 [FXGL Background Thread 4 ] DEBUG TMXLevelLoader       - Creating object layer entities
+14:18:36.235 [FXGL Background Thread 4 ] DEBUG GameWorld            - Clearing removable entities
+14:18:36.236 [FXGL Background Thread 4 ] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@3f9cb919
+14:18:36.287 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/khpark/Downloads/main_repo-yw_develop/main_repo-yw_develop/target/classes/assets/textures/background/forest.png
+14:18:36.317 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:36.319 [FXGL Background Thread 4 ] INFO  FXGLApplication      - Game initialization took: 0.224 sec
+14:18:36.392 [FXGL Background Thread 2 ] INFO  UpdaterService       - Your current version:  21
+14:18:36.393 [FXGL Background Thread 2 ] INFO  UpdaterService       - Latest stable version: 21.1
+14:18:36.919 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:18:36.932 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from MainLoadingScene and adding to GameScene
+14:18:36.932 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - MainLoadingScene -> GameScene
+14:18:36.943 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:36.963 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:36.995 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.012 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.026 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.042 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.060 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.074 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.091 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.107 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.123 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.140 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.155 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.174 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.188 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.205 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.225 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.236 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.270 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.284 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.300 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.318 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.333 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.348 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.364 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.381 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.396 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.413 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.428 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.444 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.460 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.474 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.491 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.507 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.523 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.538 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.554 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.570 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.586 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.603 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.619 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.653 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.668 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.686 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.699 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.716 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.733 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.747 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.766 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.780 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.795 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.812 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.826 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.843 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.858 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.875 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.892 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.907 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.923 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.939 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.955 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.970 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:37.986 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.003 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.018 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.034 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.050 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.087 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.100 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.116 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.135 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.148 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.166 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.181 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.195 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.213 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.229 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.243 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.259 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.275 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.292 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.307 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.325 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.339 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.355 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.374 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.387 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.404 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.418 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.452 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.468 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.485 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.501 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.515 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.533 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.547 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.563 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.579 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.596 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.612 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.629 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.645 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.660 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.675 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.691 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.706 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.722 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.739 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.754 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.770 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.786 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.802 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.819 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.855 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.866 [FXGL Background Thread 3 ] DEBUG Engine               - Logging environment variables
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - achievements: []
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeight: 720.0
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - actualHeightProperty: ReadOnlyDoubleProperty [value: 720.0]
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidth: 1280.0
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - actualWidthProperty: ReadOnlyDoubleProperty [value: 1280.0]
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - appIcon: fxgl_icon.png
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - applicationMode: DEVELOPER
+14:18:38.868 [FXGL Background Thread 3 ] DEBUG Engine               - cSSList: [fxgl_dark.css]
+14:18:38.868 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.871 [FXGL Background Thread 3 ] DEBUG Engine               - collisionDetectionStrategy: BRUTE_FORCE
+14:18:38.871 [FXGL Background Thread 3 ] DEBUG Engine               - configClass: Optional.empty
+14:18:38.871 [FXGL Background Thread 3 ] DEBUG Engine               - credits: []
+14:18:38.871 [FXGL Background Thread 3 ] DEBUG Engine               - defaultCursor: CursorInfo(imageName=fxgl_default_cursor.png, hotspotX=7.0, hotspotY=6.0)
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - devEnableDebugCameraProperty: BooleanProperty [value: false]
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - enabledMenuItems: []
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - engineServices: [class com.almasb.fxgl.app.services.FXGLAssetLoaderService, class com.almasb.fxgl.app.FXGLApplication$GameApplicationService, class com.almasb.fxgl.app.services.FXGLDialogService, class com.almasb.fxgl.app.services.IOTaskExecutorService, class com.almasb.fxgl.io.FileSystemService, class com.almasb.fxgl.localization.LocalizationService, class com.almasb.fxgl.app.services.SystemBundleService, class com.almasb.fxgl.profile.SaveLoadService, class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider, class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider, class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementService, class com.almasb.fxgl.cutscene.CutsceneService, class com.almasb.fxgl.minigames.MiniGameService, class com.almasb.fxgl.net.NetService, class com.almasb.fxgl.app.services.UpdaterService, class com.almasb.fxgl.dev.DevService]
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - fontGame: Abel-Regular.ttf
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - fontMono: TerminalLandMono-Regular.otf
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - fontSizeScaleUI: 1.0
+14:18:38.872 [FXGL Background Thread 3 ] DEBUG Engine               - fontText: Courier-Prime.ttf
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - fontUI: VarelaRound-Regular.ttf
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficulty: MEDIUM
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficultyProperty: ObjectProperty [value: MEDIUM]
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolume: 0.5
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.25]
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolume: 0.5
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.5]
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - height: 720
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - is3D: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isAndroid: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isBrowser: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isClickFeedbackEnabled: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isCloseConfirmation: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isDesktop: true
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isDeveloperMenuEnabled: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isEmbedded: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isEntityPreloadEnabled: true
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isExperimentalTiledLargeMap: false
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isFileSystemWriteAllowed: true
+14:18:38.873 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenAllowed: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenFromStart: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isGameMenuEnabled: true
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isIOS: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isIntroEnabled: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isLinux: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isMac: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isMainMenuEnabled: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isManualResizeEnabled: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isMobile: false
+14:18:38.874 [FXGL Background Thread 3 ] DEBUG Engine               - isNative: false
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - isPauseMusicWhenMinimized: true
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - isPreserveResizeRatio: false
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - isProfilingEnabled: false
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - isScaleAffectedOnResize: true
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - isSingleStep: false
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - isUserProfileEnabled: false
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - isWindows: true
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - menuKey: ESCAPE
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - mouseSensitivity: 0.2
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - pixelsPerMeter: 50.0
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - platform: WINDOWS
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - prefHeightProperty: ReadOnlyDoubleProperty [value: 720.0]
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - prefWidthProperty: ReadOnlyDoubleProperty [value: 1280.0]
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - profileDir: profiles/
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - profileName: StringProperty [value: DEFAULT]
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - randomSeed: -1
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=WINDOWS, version=21, build=28.12.2023 13.35)
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - saveFileExt: sav
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - scaledHeightProp$fxgl: DoubleProperty [bound, value: 720.0]
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - scaledWidthProp$fxgl: DoubleProperty [bound, value: 1280.0]
+14:18:38.875 [FXGL Background Thread 3 ] DEBUG Engine               - sceneFactory: com.almasb.fxglgames.platformer.PlatformerApp$1@4b2b2cec
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - secondsIn24h: 60
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuBack: menu/back.wav
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuPress: menu/press.wav
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuSelect: menu/select.wav
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - soundNotification: core/notification.wav
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - stageStyle: DECORATED
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - ticksPerSecond: -1
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - title: Untitled
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/release/README.md
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - userAppClass: class com.almasb.fxglgames.platformer.PlatformerApp
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - version: 0.0
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - versionCheckDays: 7
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - width: 1280
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - Logging services
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLAssetLoaderService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.FXGLApplication$GameApplicationService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLDialogService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.IOTaskExecutorService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.io.FileSystemService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.localization.LocalizationService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.SystemBundleService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.profile.SaveLoadService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.audio.AudioPlayer
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.achievement.AchievementService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.cutscene.CutsceneService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.minigames.MiniGameService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.net.NetService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.UpdaterService
+14:18:38.876 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.dev.DevService
+14:18:38.882 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.900 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.916 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.936 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.946 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.962 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.982 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:38.996 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.018 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.027 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.042 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.061 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.075 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.091 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.106 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.124 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.141 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.154 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.172 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.188 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.203 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.218 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.254 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.270 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.286 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.300 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.317 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.337 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.353 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.365 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.378 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.395 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.410 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.426 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.442 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.459 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.475 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.492 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.508 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.524 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.538 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.554 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.570 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.587 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.604 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.618 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.634 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.651 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.684 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.698 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.714 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.730 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.746 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.761 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.778 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.795 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.816 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.826 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.842 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.858 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.875 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.890 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.907 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.924 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.939 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.954 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.970 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:39.987 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.003 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.017 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.034 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.050 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.066 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.098 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.115 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.130 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.147 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.163 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.180 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.196 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.211 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.227 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.243 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.259 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.275 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.292 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.307 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.323 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.342 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.356 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.371 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.387 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.402 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.419 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.454 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.468 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.485 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.500 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.515 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.533 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.549 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.564 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.582 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.595 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.613 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.627 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.644 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.659 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.675 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.690 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.707 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.723 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.738 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.754 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.771 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.786 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.802 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.819 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.835 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.867 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.884 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.899 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.916 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.931 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.947 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.964 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.984 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:40.994 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.010 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.026 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.042 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.061 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.074 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.090 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.106 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.123 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.137 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.156 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.171 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.187 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.203 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.218 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.234 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.251 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.283 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.301 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.314 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.333 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.347 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.363 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.378 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.395 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.412 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.427 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.444 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.459 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.475 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.493 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.507 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.523 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.538 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.555 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.571 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.587 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.602 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.618 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.635 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.651 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.667 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.698 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.714 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.731 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.746 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.763 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.779 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.795 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.811 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.827 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.845 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.859 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.874 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.891 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.907 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.924 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.938 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.955 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.971 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:41.986 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.002 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.018 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.049 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.050 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.066 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.098 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.114 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.131 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.146 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.162 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.179 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.194 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.211 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.227 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.243 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.258 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.274 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.290 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.306 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.322 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.338 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.354 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.370 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.388 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.402 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.418 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.452 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.467 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.483 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.498 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.513 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.531 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.546 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.564 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.579 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.594 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.610 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.626 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.643 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.658 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.675 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.690 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.706 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.722 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.738 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.753 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.772 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.786 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.804 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.819 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.851 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.868 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.884 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.899 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.913 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.931 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.946 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.963 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.978 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:42.995 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.010 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.026 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.043 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.058 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.075 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.094 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.106 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.122 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.139 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.154 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.172 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.188 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.202 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.218 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.236 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.267 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.285 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.299 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.316 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.332 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.351 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.362 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.378 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.394 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.410 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.427 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.443 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.458 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.474 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.491 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.506 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.522 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.539 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.554 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.570 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.586 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.602 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.618 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.651 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.667 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.683 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.699 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.715 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.730 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.747 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.764 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.779 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.796 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.812 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.827 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.842 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.858 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.874 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.894 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.906 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.923 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.938 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.955 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.971 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:43.986 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.002 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.018 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.034 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.052 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.082 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.097 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.114 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.132 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.146 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.162 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.178 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.194 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.211 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.227 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.243 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.259 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.274 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.293 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.306 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.322 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.339 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.356 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.370 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.386 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.409 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.417 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.434 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.451 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.483 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.499 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.516 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.531 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.547 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.563 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.579 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.594 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.610 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.627 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.644 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.659 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.675 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.693 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.706 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.722 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.738 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.754 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.772 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.787 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.802 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.818 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.835 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.850 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.865 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.882 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.914 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.934 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.947 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.964 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.978 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:44.994 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.010 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.026 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.044 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.058 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.074 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.091 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.107 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.123 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.138 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.155 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.173 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.186 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.204 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.218 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.234 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.250 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.284 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.298 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.315 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.333 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.348 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.363 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.379 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.395 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.410 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.427 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.443 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.459 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.474 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.492 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.507 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.523 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.540 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.555 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.572 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.586 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.602 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.618 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.634 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.667 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.685 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.699 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.716 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.734 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.747 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.764 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.778 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.794 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.813 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.827 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.844 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.869 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Close Level End Screen - LMB
+14:18:45.871 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/khpark/Downloads/main_repo-yw_develop/main_repo-yw_develop/target/classes/assets/textures/star_empty.png
+14:18:45.872 [ClientAsyncConnThread    ] DEBUG TCPClient            - Connecting to 192.168.0.40:55555 type: class com.almasb.fxgl.core.serialization.Bundle
+14:18:45.881 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: file:/C:/Users/khpark/Downloads/main_repo-yw_develop/main_repo-yw_develop/target/classes/assets/textures/star_full.png
+14:18:45.886 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Push state: LevelEndScene
+14:18:45.886 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:18:45.887 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to LevelEndScene
+14:18:45.887 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - GameScene -> LevelEndScene
+14:18:50.395 [JavaFX Application Thread] DEBUG FXGLApplication      - Exiting FXGL
+14:18:50.395 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+14:18:50.395 [JavaFX Application Thread] DEBUG SystemBundleService  - Saving FXGL system data
+14:18:50.396 [JavaFX Application Thread] DEBUG FileSystemAccess     - Writing to: C:\Users\khpark\Downloads\main_repo-yw_develop\main_repo-yw_develop\system\fxgl.bundle
+14:18:50.398 [JavaFX Application Thread] DEBUG Async                - Shutting down background threads
+14:18:50.398 [JavaFX Application Thread] DEBUG PrimaryStageWindow   - Closing main window
+14:18:50.417 [JavaFX Application Thread] DEBUG Logger               - Closing Logger
