@@ -252,6 +252,19 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
 
 
 
+/**********************스코어 표시************************************/
+        var text1 = getUIFactoryService().newText("p1 LIFE: "+"life1" //score로직 추가 필요
+                , Color.RED, 30.0);
+        var text2 = getUIFactoryService().newText("p2 LIFE: "+"life2" //score로직 추가 필요
+                , Color.BLUE, 30.0);
+        text1.setTranslateX(100);
+        text1.setTranslateY(100);
+        getGameScene().addUINode(text1);
+        text2.setTranslateX(100);
+        text2.setTranslateY(150);
+        getGameScene().addUINode(text2);
+/**********************스코어 표시************************************/
+
 
         Viewport viewport = getGameScene().getViewport();
         viewport.setBounds(-1500, 0, 250 * 70, getAppHeight());
@@ -414,7 +427,19 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
             addUINode(dpadView, 0, getAppHeight() - 290);
             addUINode(buttonsView, getAppWidth() - 280, getAppHeight() - 290);
         }
+/********************************* 게임 시간 보여주는 기능 추가 ****************************/
+        var textUserTime = getUIFactoryService().newText("", Color.WHITE, 30.0);
+        textUserTime.setTranslateX(100);
+        textUserTime.setTranslateY(50);
+        getGameScene().addUINode(textUserTime);
+
+        run(() -> {
+            Duration userTime = Duration.seconds(getd("levelTime"));
+            textUserTime.setText(String.format("TIME: %.0f sec", 120 - userTime.toSeconds()));
+        }, Duration.seconds(0.1)); // 0.1초마다 업데이트
     }
+/********************************* 게임 시간 보여주는 기능 추가 ****************************/
+
 
     @Override
     protected void onUpdate(double tpf) {
@@ -494,7 +519,25 @@ getWorldProperties().<Integer>addListener("secondaryCharge", (prev, now) -> {
         if (player.getY() > getAppHeight()) {
             onPlayerDied();
         }
+
+        /**********************게임시간 종료 로직 **********************************************/
+        Duration elapsedTime = Duration.seconds(getd("levelTime"));
+        if (elapsedTime.greaterThanOrEqualTo(Duration.seconds(120))) {
+            //showMessage("Player?" +"  Win!");
+            levelEndScene.get().onLevelFinish();
+
+            // the above runs in its own scene, so fade will wait until
+            // the user exits that scene
+            //FXGL.getGameController().startNewGame();
+
+            //getGameController().exit();
+
+        }
+
+/**************************************게임시간 종료 로직*******************************/
+
     }
+
 
     public void onPlayerDied() {
 //        setLevel(geti("level")); // 레벨 세팅 안하고, 플레이어 위치만 재조정함.
