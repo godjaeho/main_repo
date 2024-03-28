@@ -221,18 +221,33 @@ public class PlatformerFactory implements EntityFactory {
         PhysicsComponent physics = new PhysicsComponent();
         physics.setFixtureDef(new FixtureDef().density(0.05f));
         physics.setBodyType(BodyType.DYNAMIC);
-        double x = data.getX()/100000;
-            double y = data.getY()/100000;
+            
+        int shotx = ((int)(data.getX())/10000)-4000;
+            int shoty = (int)(data.getY())/10000;
 
-            double shotx = data.getX()%1000.0;
-            double shoty = data.getY()%1000.0;
+         int x = ((int)(data.getX()) - (shotx+4000)*10000)-4000;
+        int y = (int)(data.getY()) - shoty*10000;
         
+        
+        // int x = (int)(data.getX())/10000;
+        //     int y = (int)(data.getY())/10000;
+
+        //  int shotx = (int)(data.getX()) - x*10000;
+        // int shoty = (int)(data.getY()) - y*10000;
+           
+        
+        // int shotx = (int)(data.getX())%1900;
+            // int shoty = (int)(data.getY())%1900;
+            
         
         SpawnData newdata = new SpawnData(x,y);  
         physics.setOnPhysicsInitialized(() -> {
             
             System.out.println(shotx);
             Point2D mousePosition = new Point2D(shotx, shoty);
+
+            System.out.println("상대방한테 받은거");
+            System.out.println(mousePosition);
             // Point2D mousePosition = FXGL.getInput().getMousePositionWorld();
             //new Point2D(x, y)
                       

@@ -12,6 +12,7 @@ com\almasb\fxglgames\platformer\PlayerViewComponent.class
 com\almasb\fxglgames\platformer\PlatformerApp$2.class
 com\almasb\fxglgames\platformer\Config.class
 com\almasb\fxglgames\platformer\LevelEndScene$LevelTimeData.class
+com\almasb\fxglgames\platformer\WaitingMenu.class
 com\almasb\fxglgames\platformer\EntityType.class
 com\almasb\fxglgames\platformer\PlatformerApp$4.class
 com\almasb\fxglgames\platformer\PlatformerFactory.class

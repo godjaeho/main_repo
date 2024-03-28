@@ -88,7 +88,8 @@ public final class Config {
     public static final int COLLISION_PENALTY = -20;
     public static final int TIME_PENALTY = -1;
 
-    public static final int PLAY_TIME = 120;
+
+    public static final int PLAY_TIME = 200;
     public static final Duration PENALTY_INTERVAL = seconds(0.5);
 
     public static final Duration PICKUP_RICOCHET_DURATION = seconds(3);

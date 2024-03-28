@@ -107,9 +107,11 @@ public class LevelEndScene extends SubScene {
             System.out.println("else문 안임 !!: " + geti("lives"));
             textUserTime.setText(String.format("나의  승리!!", userTime.toSeconds()));
         }
+
         gradeBox.getChildren().setAll(
                 new Grade(Duration.seconds(timeData.star1), userTime),
-                new Grade(Duration.seconds(timeData.star2), userTime),
+                new Grade(Duration.seconds(timeData.star2),
+                 userTime),
                 new Grade(Duration.seconds(timeData.star3), userTime)
         );
 

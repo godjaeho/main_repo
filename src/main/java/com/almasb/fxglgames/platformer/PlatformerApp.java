@@ -5,10 +5,7 @@ import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.app.ApplicationMode;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.app.GameSettings;
-import com.almasb.fxgl.app.scene.GameView;
-import com.almasb.fxgl.app.scene.LoadingScene;
-import com.almasb.fxgl.app.scene.SceneFactory;
-import com.almasb.fxgl.app.scene.Viewport;
+import com.almasb.fxgl.app.scene.*;
 import com.almasb.fxgl.core.util.LazyValue;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.SpawnData;
@@ -86,17 +83,30 @@ public class PlatformerApp extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings settings) {
-        settings.setWidth(800);
-        settings.setHeight(600);
+        settings.setWidth(1280);
+        settings.setHeight(720);
+
+/***********************************대기 화면 수정***************************************/
+//        settings.setSceneFactory(new SceneFactory() {
+//            @Override
+//            public LoadingScene newLoadingScene() {
+//                return new MainLoadingScene();
+//                //return new WaitingScene();
+//            }
+//        });
+
+        settings.setMainMenuEnabled(true);
         settings.setSceneFactory(new SceneFactory() {
             @Override
-            public LoadingScene newLoadingScene() {
-                return new MainLoadingScene();
+            public FXGLMenu newMainMenu() {
+                return new WaitingMenu();
             }
+
         });
         settings.setApplicationMode(ApplicationMode.DEVELOPER);
-    }
 
+    }
+    /**********************************대기화면 수정******************************************/
     private LazyValue<LevelEndScene> levelEndScene = new LazyValue<>(() -> new LevelEndScene());
     private static Entity player;
     private static Entity player2;
@@ -134,7 +144,11 @@ public class PlatformerApp extends GameApplication {
 
         getInput().addEventHandler(MouseEvent.MOUSE_PRESSED, event -> {
             if (event.getButton() == MouseButton.PRIMARY) {
-                double mouseX = event.getSceneX();
+                Point2D mousePosition = FXGL.getInput().getMousePositionWorld();
+
+                double mouseX = mousePosition.getX();
+                // event.getSceneX();
+
                 double mouseY = event.getSceneY();
                 // 마우스 클릭 위치와 함께 sendPlayerPosition 호출
                 sendPlayerPosition(true, mouseX, mouseY);
@@ -208,17 +222,21 @@ public class PlatformerApp extends GameApplication {
 
 
         //플레이어 2의 슛함수
-        private void shoot2(double x, double y) {
+        private void shoot2(double shotx, double shoty) {
 
-            double xx = (player2.getPosition().getX()) *100000;
-            double yy = (player2.getPosition().getY()-20) *100000;
+            int xx =  (int)(player2.getPosition().getX());
+            int yy = (int)((player2.getPosition().getY()-20));
             
-            System.out.println(player2.getPosition().getX());
-            System.out.println(player2.getPosition().getX()+30);
-
-
-            Point2D newww = new Point2D(xx+x , yy+y);
             
+            
+            
+            Point2D newww = new Point2D(((int)xx+4000)+((int)shotx+4000)*10000 , (int)yy+(int)shoty*10000);
+
+
+
+            System.out.println("뉴 객체 확인 ");
+
+            System.out.println(newww);
 
             Entity bulletEntity =  spawn("bullet2", newww);
             
@@ -239,6 +257,7 @@ public class PlatformerApp extends GameApplication {
         vars.put("secondaryCharge", 0); // hp UI(초록색 원)
         vars.put("lives", 3); // 플레이어 목숨 부여
         vars.put("lives2", 3); // 상대 플레이어 목숨 부여
+
         vars.put("kills", 0);
 
     }
@@ -449,17 +468,22 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
         Point2D pos = player.getPosition();
 
         jsonObj.put("PI", playerID);
-        jsonObj.put("x", pos.getX());
+        // 오차 보정
+        jsonObj.put("x", (int)(pos.getX()) );
         jsonObj.put("y", pos.getY());
 
         jsonObj.put("isShot", isShot);
-        jsonObj.put("shotx", x);
-        jsonObj.put("shoty", y);
 
         /****************hp, lives(목숨)************************/
         jsonObj.put("hp", geti("hp"));
         jsonObj.put("lives", geti("lives"));
         /*************************************************/
+        //
+        jsonObj.put("shotx", (int)x);
+        jsonObj.put("shoty", y);
+        
+       
+
         sendMessage(jsonObj.toString());
     }
 
@@ -476,11 +500,11 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
 
     // JSONObject에서 필요한 값 추출
     int receivedPlayerID = jsonObj.getInt("PI");
-    double x = jsonObj.getDouble("x");
+    int x = jsonObj.getInt("x");
     double y = jsonObj.getDouble("y");
         boolean isShot = jsonObj.getBoolean("isShot");
-double shotx = jsonObj.getDouble("shotx");
-double shoty = jsonObj.getDouble("shoty");
+int shotx = jsonObj.getInt("shotx");
+int shoty = jsonObj.getInt("shoty");
 
     //hp, lives 추출
         int received_hp = jsonObj.getInt("hp");
@@ -538,6 +562,7 @@ double shoty = jsonObj.getDouble("shoty");
             protected void onCollisionBegin(Entity bullet, Entity player) {
                 bullet.removeFromWorld();
                 inc("hp", -24);
+
             }
         });
 
