@@ -1,5 +1,6 @@
 com\almasb\fxglgames\platformer\PlatformerApp$1.class
 com\almasb\fxglgames\platformer\LevelEndScene$1.class
+com\almasb\fxglgames\platformer\ReceivedPlayerViewComponent.class
 com\almasb\fxglgames\platformer\PlatformerApp.class
 com\almasb\fxglgames\platformer\PlatformerApp$3.class
 module-info.class

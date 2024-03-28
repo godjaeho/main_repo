@@ -111,6 +111,28 @@ public class PlatformerFactory implements EntityFactory {
                 .build();
     }
 
+    @Spawns("received_player")
+    public Entity receivedPlayer(SpawnData data) {
+        PhysicsComponent physics = new PhysicsComponent();
+        physics.setBodyType(BodyType.DYNAMIC);
+        physics.addGroundSensor(new HitBox("GROUND_SENSOR", new Point2D(16, 38), BoundingShape.box(6, 8)));
+
+        // this avoids player sticking to walls
+        physics.setFixtureDef(new FixtureDef().friction(0.0f));
+
+        return entityBuilder(data)
+                .type(PLAYER)
+                .bbox(new HitBox(new Point2D(5,5), BoundingShape.circle(12)))
+                .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(10, 17)))
+                .with(physics)
+                .with(new CollidableComponent(true))
+                .with(new IrremovableComponent())
+                .with(new PlayerComponent())
+                .with(new ReceivedPlayerViewComponent())
+                .build();
+    }
+
+
     @Spawns("exitSign")
     public Entity newExit(SpawnData data) {
         return entityBuilder(data)

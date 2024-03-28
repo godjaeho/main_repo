@@ -289,7 +289,7 @@ public class PlatformerApp extends GameApplication {
         // player must be spawned after call to nextLevel, otherwise player gets removed
         // before the update tick _actually_ adds the player to game world
         player = spawn("player", 50, 50);
-        player2 = spawn("player", 50, 60 );
+        player2 = spawn("received_player", 50, 60 );
         // player3 = spawn("player", 50, 70);
         // player4 = spawn("player", 50, 80 );
         // player5 = spawn("player", 50, 90);
@@ -319,7 +319,6 @@ getWorldProperties().<Integer>addListener("hp", (prev, now) -> {
         System.out.println("killed by timeout");
         set("hp", PLAYER_HP);
     }
-
 });
 
 if (IS_TIME_HP_PENALTY) {
