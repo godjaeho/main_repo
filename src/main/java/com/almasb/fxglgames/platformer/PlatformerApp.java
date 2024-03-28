@@ -119,7 +119,8 @@ public class PlatformerApp extends GameApplication {
     private static Client<Bundle> client;
     
 
-
+    //상대 플레이어의 목숨
+    int received_lives = 3;
 
 
     
@@ -237,6 +238,7 @@ public class PlatformerApp extends GameApplication {
         vars.put("hp2", PLAYER_HP); // hp 부여
         vars.put("secondaryCharge", 0); // hp UI(초록색 원)
         vars.put("lives", 3); // 플레이어 목숨 부여
+        vars.put("lives2", 3); // 상대 플레이어 목숨 부여
         vars.put("kills", 0);
 
     }
@@ -275,7 +277,7 @@ public class PlatformerApp extends GameApplication {
         player5 = null;
         player6 = null;
 
-        playerID = 1;
+        playerID = 2;
 
         nextLevel();
 
@@ -301,9 +303,6 @@ public class PlatformerApp extends GameApplication {
         // set("player4", player4);
         // set("player5", player5);
         // set("player6", player6);
-
-       
-        
 
         spawn("background");
 
@@ -339,9 +338,9 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
 
 
 /**********************스코어 표시************************************/
-        text1 = getUIFactoryService().newText("PLAYER 1 남은 목숨: " + geti("lives") //score로직 추가 필요
+        text1 = getUIFactoryService().newText("나의 남은 목숨: 3"
                 , Color.RED, 30.0);
-        text2 = getUIFactoryService().newText("PLAYER 2 남은 목숨: " + geti("lives") //score로직 추가 필요
+        text2 = getUIFactoryService().newText("상대의 남은 목숨: 3"
                 , Color.BLUE, 30.0);
         text1.setTranslateX(100);
         text1.setTranslateY(100);
@@ -486,9 +485,9 @@ double shoty = jsonObj.getDouble("shoty");
 
     //hp, lives 추출
         int received_hp = jsonObj.getInt("hp");
-        int received_lives = jsonObj.getInt("lives");
+//        received_lives = jsonObj.getInt("lives");
 
-        System.out.println( receivedPlayerID +  " 의 hp : " + received_hp + ", lives : " + received_lives);
+//        System.out.println( receivedPlayerID +  " 의 hp : " + received_hp + ", lives : " + received_lives);
 
 
     // 현재 클라이언트의 플레이어와 ID가 다를 경우에만 위치 업데이트
@@ -496,7 +495,15 @@ double shoty = jsonObj.getDouble("shoty");
         // FXGL 엔진의 메인 스레드에서 UI 업데이트 실행
         Platform.runLater(() -> {
             set("hp2",  received_hp);
-            System.out.println("player2의 hp를 get : " + geti("hp2"));
+//            System.out.println("player2의 hp를 get : " + geti("hp2"));
+
+            if (received_lives != jsonObj.getInt("lives")) {
+                if (received_lives == 0) {
+                    levelEndScene.get().onLevelFinish();
+                }
+                received_lives = jsonObj.getInt("lives");
+                text2.setText("상대의 남은 목숨: " + received_lives);
+            }
 
         if (isShot==true) {
             shoot2(shotx, shoty);
@@ -668,13 +675,14 @@ double shoty = jsonObj.getDouble("shoty");
 
             //남은 목숨이 1인 경우 => 더이상 리스폰하지 않음
             if (currentLives <= 1) {
-                text1.setText("PLAYER 1 남은 목숨: " + 0);
+                text1.setText("나의 남은 목숨: " + 0);
+                inc("lives", -1);
                 levelEndScene.get().onLevelFinish();
             }
             //남은 목숨이 2이상인 경우 => 위치 재조정, hp초기화, 목숨 감소
             else {
                 // 전광판 남은 목숨 변경
-                text1.setText("PLAYER 1 남은 목숨: " + (currentLives - 1));
+                text1.setText("나의 남은 목숨: " + (currentLives - 1));
 
                 // 위치 재조정
                 player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(50, 50));
