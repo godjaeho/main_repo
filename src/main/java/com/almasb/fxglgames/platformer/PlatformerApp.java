@@ -529,8 +529,7 @@ double shoty = jsonObj.getDouble("shoty");
             @Override
             protected void onCollisionBegin(Entity bullet, Entity player) {
                 bullet.removeFromWorld();
-                player.removeFromWorld();
-                
+                inc("hp", -24);
             }
         });
 
@@ -638,7 +637,7 @@ double shoty = jsonObj.getDouble("shoty");
 
 
 
-        if (player.getY() > getAppHeight()) {
+        if (player.getY() > getAppHeight() || geti("hp") <= 4) {
             onPlayerDied();
         }
 

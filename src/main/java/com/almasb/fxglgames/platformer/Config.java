@@ -24,7 +24,7 @@ public final class Config {
 
     public static final boolean IS_SOUND_ENABLED = false;
 
-    public static final boolean IS_TIME_HP_PENALTY = true;
+    public static final boolean IS_TIME_HP_PENALTY = false;
 
     /**
      * How much space is between edges of the game and boundary of the playable grid.

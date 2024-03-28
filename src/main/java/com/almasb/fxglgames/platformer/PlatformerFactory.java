@@ -121,7 +121,7 @@ public class PlatformerFactory implements EntityFactory {
         physics.setFixtureDef(new FixtureDef().friction(0.0f));
 
         return entityBuilder(data)
-                .type(PLAYER)
+                .type(PLAYER2)
                 .bbox(new HitBox(new Point2D(5,5), BoundingShape.circle(12)))
                 .bbox(new HitBox(new Point2D(10,25), BoundingShape.box(10, 17)))
                 .with(physics)
