@@ -234,8 +234,9 @@ public class PlatformerApp extends GameApplication {
         vars.put("levelTime", 0.0);
         vars.put("score", 0);
         vars.put("hp", PLAYER_HP); // hp 부여
+        vars.put("hp2", PLAYER_HP); // hp 부여
         vars.put("secondaryCharge", 0); // hp UI(초록색 원)
-        vars.put("lives", 1); // 플레이어 목숨 부여
+        vars.put("lives", 3); // 플레이어 목숨 부여
         vars.put("kills", 0);
 
     }
@@ -449,7 +450,7 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
     public void sendPlayerPosition(boolean isShot, double x, double y) {
         JSONObject jsonObj = new JSONObject();
         Point2D pos = player.getPosition();
-    
+
         jsonObj.put("PI", playerID);
         jsonObj.put("x", pos.getX());
         jsonObj.put("y", pos.getY());
@@ -458,7 +459,10 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
         jsonObj.put("shotx", x);
         jsonObj.put("shoty", y);
 
-
+        /****************hp, lives(목숨)************************/
+        jsonObj.put("hp", geti("hp"));
+        jsonObj.put("lives", geti("lives"));
+        /*************************************************/
         sendMessage(jsonObj.toString());
     }
 
@@ -481,22 +485,23 @@ getWorldProperties().<Integer>addListener("lives", (prev, now) -> {
 double shotx = jsonObj.getDouble("shotx");
 double shoty = jsonObj.getDouble("shoty");
 
+    //hp, lives 추출
+        int received_hp = jsonObj.getInt("hp");
+        int received_lives = jsonObj.getInt("lives");
 
+        System.out.println( receivedPlayerID +  " 의 hp : " + received_hp + ", lives : " + received_lives);
 
 
     // 현재 클라이언트의 플레이어와 ID가 다를 경우에만 위치 업데이트
     if (receivedPlayerID != playerID) {
         // FXGL 엔진의 메인 스레드에서 UI 업데이트 실행
         Platform.runLater(() -> {
-        
-        if (isShot==true)
-        {
-            shoot2(shotx, shoty  );
+            set("hp2",  received_hp);
+            System.out.println("player2의 hp를 get : " + geti("hp2"));
 
-
+        if (isShot==true) {
+            shoot2(shotx, shoty);
         }
-
-        
             // player2가 다른 플레이어를 대표한다고 가정
             if (player2 != null) {
                 player2.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(x, y));
@@ -504,6 +509,9 @@ double shoty = jsonObj.getDouble("shoty");
         });
     }
 
+//    else {
+//        PLAYER_HP = hp;
+//    }
 
 
 
@@ -626,9 +634,6 @@ double shoty = jsonObj.getDouble("shoty");
 
         if (player != null) {
             sendPlayerPosition(false);
-
-
-
         }
 
 
@@ -657,22 +662,21 @@ double shoty = jsonObj.getDouble("shoty");
 
     }
 
+//        setLevel(geti("level"));
 
     public void onPlayerDied() {
-//        setLevel(geti("level"));
         if (player != null) {
-            int curUserLife = geti("lives"); // 죽기 직전 남은 목숨 개수
+            int currentLives = geti("lives"); // 죽기 직전 남은 목숨 개수
 
             //남은 목숨이 1인 경우 => 더이상 리스폰하지 않음
-            if (curUserLife <= 1) {
+            if (currentLives <= 1) {
                 text1.setText("PLAYER 1 남은 목숨: " + 0);
-                System.out.println("남은 목숨 개수 0");
                 levelEndScene.get().onLevelFinish();
             }
             //남은 목숨이 2이상인 경우 => 위치 재조정, hp초기화, 목숨 감소
             else {
                 // 전광판 남은 목숨 변경
-                text1.setText("PLAYER 1 남은 목숨: " + (curUserLife - 1));
+                text1.setText("PLAYER 1 남은 목숨: " + (currentLives - 1));
 
                 // 위치 재조정
                 player.getComponent(PhysicsComponent.class).overwritePosition(new Point2D(50, 50));
