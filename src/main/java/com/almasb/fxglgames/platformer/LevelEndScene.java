@@ -99,11 +99,14 @@ public class LevelEndScene extends SubScene {
 
         LevelTimeData timeData = geto("levelTimeData");
 
-        if (geti("lives") == 0)
+        if (geti("lives") <= 0) {
+            System.out.println("if문 안임 !!: " + geti("lives"));
             textUserTime.setText(String.format("상대  승리!!", userTime.toSeconds()));
-        else
+        }
+        else{
+            System.out.println("else문 안임 !!: " + geti("lives"));
             textUserTime.setText(String.format("나의  승리!!", userTime.toSeconds()));
-
+        }
         gradeBox.getChildren().setAll(
                 new Grade(Duration.seconds(timeData.star1), userTime),
                 new Grade(Duration.seconds(timeData.star2), userTime),

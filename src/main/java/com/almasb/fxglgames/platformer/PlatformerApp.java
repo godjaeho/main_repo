@@ -276,7 +276,6 @@ public class PlatformerApp extends GameApplication {
         player4 = null;
         player5 = null;
         player6 = null;
-
         playerID = 2;
 
         nextLevel();
@@ -485,6 +484,11 @@ double shoty = jsonObj.getDouble("shoty");
 
     //hp, lives 추출
         int received_hp = jsonObj.getInt("hp");
+        if (jsonObj.getInt("lives") == 0) {
+            Platform.runLater(() -> {
+                levelEndScene.get().onLevelFinish();
+            });
+        }
 //        received_lives = jsonObj.getInt("lives");
 
 //        System.out.println( receivedPlayerID +  " 의 hp : " + received_hp + ", lives : " + received_lives);
@@ -498,9 +502,6 @@ double shoty = jsonObj.getDouble("shoty");
 //            System.out.println("player2의 hp를 get : " + geti("hp2"));
 
             if (received_lives != jsonObj.getInt("lives")) {
-                if (received_lives == 0) {
-                    levelEndScene.get().onLevelFinish();
-                }
                 received_lives = jsonObj.getInt("lives");
                 text2.setText("상대의 남은 목숨: " + received_lives);
             }
@@ -677,7 +678,7 @@ double shoty = jsonObj.getDouble("shoty");
             if (currentLives <= 1) {
                 text1.setText("나의 남은 목숨: " + 0);
                 inc("lives", -1);
-                levelEndScene.get().onLevelFinish();
+//                levelEndScene.get().onLevelFinish();
             }
             //남은 목숨이 2이상인 경우 => 위치 재조정, hp초기화, 목숨 감소
             else {
