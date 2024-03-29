@@ -28,10 +28,10 @@ import static com.almasb.fxgl.dsl.FXGL.*;
  */
 public class LevelEndScene extends SubScene {
 
-    private static final int WIDTH = 400;
-    private static final int HEIGHT = 250;
+    private static final int WIDTH = 1000;
+    private static final int HEIGHT = 600;
 
-    private Text textUserTime = getUIFactoryService().newText("", Color.WHITE, 30.0);
+    private Text textUserTime = getUIFactoryService().newText("", Color.WHITE, 60.0);
     private HBox gradeBox = new HBox();
 
     private FontFactory levelFont = getAssetLoader().loadFont(getSettings().getFontMono());
@@ -45,23 +45,25 @@ public class LevelEndScene extends SubScene {
 
         VBox.setVgrow(gradeBox, Priority.ALWAYS);
 
-//        var textContinue = getUIFactoryService().newText("Tap to continue", Color.WHITE, 11.0);
-//        textContinue.visibleProperty().bind(isAnimationDone);
-//
-//        animationBuilder(this)
-//                .repeatInfinitely()
-//                .autoReverse(true)
-//                .scale(textContinue)
-//                .from(new Point2D(1, 1))
-//                .to(new Point2D(1.25, 1.25))
-//                .buildAndPlay();
+        /***********************tap to end********************/
+        var textContinue = getUIFactoryService().newText("Tap to End", Color.WHITE, 11.0);
+        textContinue.visibleProperty().bind(isAnimationDone);
+
+        animationBuilder(this)
+                .repeatInfinitely()
+                .autoReverse(true)
+                .scale(textContinue)
+                .from(new Point2D(1, 1))
+                .to(new Point2D(1.25, 1.25))
+                .buildAndPlay();
+        /***********************tap to end********************/
 
         var vbox = new VBox(15, textUserTime);
         vbox.setAlignment(Pos.CENTER);
         vbox.setPadding(new Insets(25));
 
         var root = new StackPane(
-                bg, vbox
+                bg, vbox, textUserTime
         );
 
         root.setTranslateX(1280 / 2 - WIDTH / 2);
@@ -101,11 +103,11 @@ public class LevelEndScene extends SubScene {
 
         if (geti("lives") <= 0) {
             System.out.println("if문 안임 !!: " + geti("lives"));
-            textUserTime.setText(String.format("상대  승리!!", userTime.toSeconds()));
+            textUserTime.setText(String.format("      상대  승리!! \n\n Tap to End Game", userTime.toSeconds()));
         }
         else{
             System.out.println("else문 안임 !!: " + geti("lives"));
-            textUserTime.setText(String.format("나의  승리!!", userTime.toSeconds()));
+            textUserTime.setText(String.format("      나의  승리!! \n\n Tap to End Game", userTime.toSeconds()));
         }
 
         gradeBox.getChildren().setAll(

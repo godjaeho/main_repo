@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\MainLoadingScene.java
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\PlayerComponent.java
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\PlatformerFactory.java
@@ -8,18 +7,6 @@ C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\Config.java
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\EntityType.java
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\PlayerButtonHandler.java
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\PlayerViewComponent.java
+C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\WaitingMenu.java
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\PlatformerApp.java
 C:\project\main_repo\src\main\java\com\almasb\fxglgames\platformer\ReceivedPlayerViewComponent.java
-=======
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\PlatformerFactory.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\module-info.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\Config.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\LevelEndScene.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\EntityType.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\PlayerComponent.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\PlayerButtonHandler.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\WaitingMenu.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\PlayerViewComponent.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\MainLoadingScene.java
-C:\Users\TECH2-07\Downloads\latest2\latest\src\main\java\com\almasb\fxglgames\platformer\PlatformerApp.java
->>>>>>> 6578d6403590ad41977f21f2a8ee5e04ed6c44f7

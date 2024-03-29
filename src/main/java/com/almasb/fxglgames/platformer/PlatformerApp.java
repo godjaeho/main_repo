@@ -295,7 +295,7 @@ public class PlatformerApp extends GameApplication {
         player4 = null;
         player5 = null;
         player6 = null;
-        playerID = 2;
+        playerID = 1;
 
         nextLevel();
 
